@@ -1,0 +1,45 @@
+@import '../variables'
+
+:host
+    min-width: $dropdown-min-width
+    width: $dropdown-width
+    display: block
+
+.dropdown-wrapper
+    width: 100%
+    position: relative
+
+    button.dropdown
+        width: 100%
+        background: none
+        border: 1px solid $dropdown-border-color
+        border-radius: $dropdown-border-radius
+        height: $dropdown-height
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 0 $dropdown-border-padding
+
+        &:hover
+            cursor: pointer
+
+        .placeholder
+            color: #a19f9f
+            font-family: $font-family
+            font-size: 13px
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+            &.selected
+                color: $option-color
+
+        .toggle-symbol
+            font-size: 20px
+            font-family: monospace
+            height: 15px
+            color: $option-color
+
+            &.closed
+                transform: rotateZ(180deg)

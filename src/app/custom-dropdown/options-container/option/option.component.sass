@@ -1,0 +1,20 @@
+@import '../../variables'
+
+:host
+    &.selected
+        .dropdown-option
+            background: #e7f7fd
+    .dropdown-option
+        padding: 9px 15px
+        font-family: $font-family
+        font-size: 13px
+        color: $option-color
+        height: $dropdown-height
+        box-sizing: border-box
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+        &:hover
+            background: #e7f7fd
+            cursor: pointer

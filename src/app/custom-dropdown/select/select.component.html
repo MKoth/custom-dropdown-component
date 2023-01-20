@@ -1,0 +1,10 @@
+<div class="dropdown-wrapper">
+    <button [className]="_displayDropdown? 'dropdown shown': 'dropdown hidden'" (click)="showDropdown($event)">
+        <p class="placeholder" [class.selected]="value">{{value??placeholder}}</p> <span class="toggle-symbol" [class.closed]="!_displayDropdown">^</span>
+    </button>
+    <ng-container *ngIf="_displayDropdown">
+        <app-options-container class="options-container" (onOutsideClick)="onOutsideClicked()">
+            <app-option [class.selected]="value==option" *ngFor="let option of options" (click)="onOptionClicked($event,option)">{{option}}</app-option>
+        </app-options-container>
+    </ng-container>
+</div>

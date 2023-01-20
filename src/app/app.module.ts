@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CustomDropdownModule } from './custom-dropdown/custom-dropdown.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CustomDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
