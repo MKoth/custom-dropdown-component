@@ -14,7 +14,6 @@ export class OptionsContainerComponent implements OnInit, OnDestroy {
   constructor(private outsideClick: OutsideClickService) { }
 
   ngOnDestroy(): void {
-    console.log("destroyed");
     this.$outsideClickedSub.unsubscribe();
   }
 
